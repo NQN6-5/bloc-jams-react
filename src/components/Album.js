@@ -68,6 +68,7 @@ class Album extends Component {
 
 
 
+
     render() {
         return (
             <section className="album">
@@ -109,6 +110,7 @@ class Album extends Component {
                     currentSong={this.state.currentSong}
                     handleSongClick={() => this.handleSongClick(this.state.currentSong)}
                     handlePrevClick={() => this.handlePrevClick()}
+
                 />
                 </section>
 
