@@ -135,7 +135,7 @@ class Album extends Component {
                             onMouseEnter={() => this.handleSongRowHover(index)} onMouseLeave={() => this.handleSongRowHover(index)} >
                             <td key={index}>{this.showSongIcon(index, song)}</td>
                             <td >{song.title}</td>
-                            <td >{song.duration}</td>
+                            <td >{this.formatTime(song.duration)}</td>
 
                         </tr>
                     )}
@@ -155,8 +155,9 @@ class Album extends Component {
                     handleNextClick={() => this.handleNextClick()}
                     handleTimeChange={(e) => this.handleTimeChange(e)}
                     handleVolumeChange={(e) => this.handleVolumeChange(e)}
-                    formattedTime={this.formatTime(this.audioElement.currentTime, true)}
-                    formattedTimeLeft={this.formatTime(this.audioElement.duration - Math.floor(this.audioElement.currentTime), true)}
+                    formattedTime={this.formatTime(this.audioElement.currentTime)}
+                    formattedDuration={this.formatTime(this.audioElement.duration)}
+                    formattedTimeLeft={this.formatTime(Math.floor(this.audioElement.currentTime)/this.audioElement.duration)}
                 />
                 </section>
 
