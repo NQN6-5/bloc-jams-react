@@ -1,15 +1,20 @@
 .App {
   text-align: center;
-}
+  font-family: Bahnschrift;
+  font-weight: bolder;
 
+}
+a, a:visited {
+  color: black;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
-  pointer-events: none;
+  pointer-events: none; 
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgb(137, 117, 156);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,12 +28,20 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.album {
+
+
 }
 
+
+body {
+
+  background-position: center;
+  background-size: 3050px 1050px;
+  color: skyblue;
+}
+song-number-column {
+  box-sizing: border-box;
+  border-bottom-width: thick;
+  border-style: double;
+}

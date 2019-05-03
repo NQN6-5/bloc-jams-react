@@ -35,7 +35,9 @@ class PlayerBar extends Component {
                     />
                     <div className="total-time">{this.props.formattedDuration}</div>
                 </section>
-
+                <section id="volume-control">
+                    <div className="time-left">-{this.props.formattedTimeLeft}</div>
+                </section>
                 <section id="volume-control">
                     <div className="volume-icon ion-volume-medium"></div>
                     <input

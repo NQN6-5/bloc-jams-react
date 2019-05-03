@@ -10,18 +10,27 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <header>
-      <nav>
-             <Link to='/'>Landing</Link>
-             <Link to='/library'>Library</Link>
-           </nav>
-         <h1>Bloc Jams</h1>
-       </header>
-         <main>
-           <Route exact path="/" component={Landing} />
-           <Route path="/library" component={Library} />
-           <Route path="/album/:slug" component={Album} />
-         </main>
+        <nav>
+          <div className="nav-wrapper">
+            <h1><a href="#" className="brand-logo">Bloc Jams</a></h1>
+            <a href="#" data-target="mobile-demo" className="sidenav-trigger hide-on-med-and-up"><ion-icon name="menu"></ion-icon></a>
+            <ul id="nav-mobile" className="right hide-on-small-only">
+              <li><Link to='/'>Landing</Link></li>
+              <li><Link to='/library'>Library</Link></li>
+            </ul>
+          </div>
+        </nav>
+        
+        <ul className="sidenav" id="mobile-demo">
+          <li><Link to='/'>Landing</Link></li>
+          <li><Link to='/library'>Library</Link></li>
+        </ul>
+
+        <main className="container">
+          <Route exact path="/" component={Landing} />
+          <Route path="/library" component={Library} />
+          <Route path="/album/:slug" component={Album} />
+        </main>
       </div>
     );
   }
